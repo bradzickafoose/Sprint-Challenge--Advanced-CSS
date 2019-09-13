@@ -19,11 +19,21 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media @phone {
+      img:nth-child(2), img:last-child {
+        display:none;
+      }
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      
+      @media @phone {
+        width: 100%;
+      }
     }
   }
 
