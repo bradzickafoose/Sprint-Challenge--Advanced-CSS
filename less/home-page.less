@@ -9,9 +9,9 @@
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
+
   }
 
   .space-images {
@@ -19,11 +19,23 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media @phone {
+
+      img:nth-child(2),
+      img:last-child {
+        display: none;
+      }
+    }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @phone {
+        width: 100%;
+      }
     }
   }
 
@@ -46,11 +58,25 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+      margin-top: @margin-small;
+      padding: 15px;
+    }
+
     .walk-text {
       width: 50%;
 
+      @media @phone {
+        width: 100%;
+      }
+
       h3 {
         margin-bottom: 10px;
+
+        @media @phone {
+          margin-top: @margin-small;
+        }
       }
 
       p {
@@ -58,13 +84,24 @@
       }
 
       .btn {
+        .btn-custom();
+
+        @media @phone {
+          padding: 4%;
+          width: 100%;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
+      @media @phone {
+        width: 100%;
+        margin-left: 0;
+      }
+
       img {
         width: 100%;
         height: auto;
@@ -72,4 +109,102 @@
       }
     }
   }
-}// home
+
+  .contact {
+    margin-top: 60px;
+    border-top: 1px solid @main-border-color;
+    padding: 50px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media @fablet {
+      flex-direction: column;
+      margin-top: @margin-small;
+      padding: 15px;
+    }
+
+    .form-text {
+      width: 50%;
+
+      @media @fablet {
+        width: 100%;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: @font-size-h1;
+
+        @media @fablet {
+          margin-top: @margin-small;
+        }
+      }
+    }
+
+    .form {
+
+      width: 50%;
+
+      @media @fablet {
+        margin-top: @margin-small;
+        width: 85%;
+      }
+
+      @media @phone {
+        width: 100%;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: @font-size-base;
+        }
+
+        label,
+        input,
+        textarea {
+          margin-top: 8px;
+        }
+
+        label:first-child {
+          margin-top: 0;
+        }
+
+        textarea {
+          height: auto;
+        }
+
+        .form-control {
+          width: 100%;
+          padding: .375rem .75rem;
+          font-size: @font-size-base;
+          line-height: @line-height-base;
+          color: @shuttle-gray;
+          border: 1px solid @border-real;
+          .border-radius();
+          transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+          &:focus {
+            color: @ebony-clay;
+            border-color: #80bdff;
+            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+          }
+        }
+
+        .btn {
+          .btn-custom();
+
+          @media @phone {
+            margin-top: @margin-small;
+            padding: 4%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// home
