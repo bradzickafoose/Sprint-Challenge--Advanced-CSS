@@ -178,7 +178,17 @@ nav .nav-items {
   display: flex;
   justify-content: space-between;
   margin-top: 1.6rem;
-  width: 40%;
+  width: 45%;
+}
+@media (max-width: 800px) {
+  nav .nav-items {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  nav .nav-items {
+    width: 90%;
+  }
 }
 nav .nav-items .nav-item {
   color: #454A59;
