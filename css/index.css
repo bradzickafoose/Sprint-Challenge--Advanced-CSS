@@ -166,6 +166,9 @@ nav {
   align-items: center;
   background-color: #F6F6F6;
   border-bottom: 2px #F1F1F1 solid;
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
   padding: 1%;
 }
 nav h1 {
@@ -175,14 +178,20 @@ nav .nav-items {
   display: flex;
   justify-content: space-between;
   margin-top: 1.6rem;
-  width: 35%;
+  width: 40%;
 }
 nav .nav-items .nav-item {
   color: #454A59;
+  font-size: 1.4rem;
   text-decoration: none;
+  padding: 6px 12px;
 }
 nav .nav-items .nav-item:hover {
-  text-decoration: underline;
+  background-color: #22283A;
+  color: #F6F6F6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 footer {
   color: #22283B;

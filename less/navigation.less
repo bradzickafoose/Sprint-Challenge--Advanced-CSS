@@ -6,24 +6,29 @@ nav {
     align-items: center;
     background-color: @nav-bg;
     border-bottom: 2px @nav-border solid;
+    .box-shadow();
     padding: 1%;
 
     h1 {
-        font-size: @nav-menu-font-size;
+        font-size: @font-size-h1;
     }
 
     .nav-items {
         display: flex;
         justify-content: space-between;
         margin-top: @margin-small;
-        width: 35%;
+        width: 40%;
 
         .nav-item {
             color: @nav-font;
+            font-size: @nav-menu-font-size;
             text-decoration: none;
+            padding: 6px 12px;
 
             &:hover {
-                text-decoration: underline;
+                background-color: @btn-bg-color;
+                color: @wild-sand;
+                .border-radius();
             }
         }
     }
