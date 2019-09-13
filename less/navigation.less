@@ -4,13 +4,20 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: @nav-bg;
-    border-bottom: 2px @nav-border solid;
+    background-color: rgba(@nav-bg, 0.98);
+    background- border-bottom: 2px @nav-border solid;
     .box-shadow();
     padding: 1%;
+    position: -webkit-sticky; // required for Safari
+    position: sticky;
+    top: 0;
 
     h1 {
         font-size: @font-size-h1;
+
+        @media @phone {
+            margin-top: @margin-small;
+        }
     }
 
     .nav-items {
@@ -32,6 +39,7 @@ nav {
             font-size: @nav-menu-font-size;
             text-decoration: none;
             padding: 6px 12px;
+            transition: 0.2s ease-in;
 
             &:hover {
                 background-color: @btn-bg-color;

@@ -165,15 +165,23 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F6F6F6;
-  border-bottom: 2px #F1F1F1 solid;
+  background-color: rgba(246, 246, 246, 0.98);
+  background-border-bottom: 2px #F1F1F1 solid;
   -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
   padding: 1%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 nav h1 {
   font-size: 3.5rem;
+}
+@media (max-width: 500px) {
+  nav h1 {
+    margin-top: 1.6rem;
+  }
 }
 nav .nav-items {
   display: flex;
@@ -196,6 +204,7 @@ nav .nav-items .nav-item {
   font-size: 1.4rem;
   text-decoration: none;
   padding: 6px 12px;
+  transition: 0.2s ease-in;
 }
 nav .nav-items .nav-item:hover {
   background-color: #22283A;
@@ -354,7 +363,7 @@ footer {
 .home .contact .form-text h3 {
   font-size: 3.5rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .home .contact .form-text h3 {
     margin-top: 1.6rem;
   }
