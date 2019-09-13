@@ -153,12 +153,36 @@ h3 {
 }
 p {
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-bottom: 2px #F1F1F1 solid;
+  padding: 1%;
+}
+nav h1 {
+  font-size: 3.5rem;
+}
+nav .nav-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+  width: 35%;
+}
+nav .nav-items .nav-item {
+  color: #454A59;
+  text-decoration: none;
+}
+nav .nav-items .nav-item:hover {
+  text-decoration: underline;
 }
 footer {
   color: #22283B;
